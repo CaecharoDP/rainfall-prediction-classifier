@@ -1,3 +1,6 @@
+# Install Required Libraries
+!pip install pandas scikit-learn matplotlib seaborn
+
 # Import Required Libraries
 import pandas as pd
 import matplotlib.pyplot as plt
