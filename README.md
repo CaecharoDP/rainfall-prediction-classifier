@@ -30,4 +30,3 @@ Caecharo Daniel Pratama - Data Analytics & ML Enthusiast
 
 ---
 *This project is part of my portfolio demonstrating practical ML skills for data analytics and machine learning roles.*
-\`\`\`
