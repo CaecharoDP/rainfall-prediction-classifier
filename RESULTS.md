@@ -3,52 +3,40 @@
 ## Best Model Configuration
 - **Algorithm**: Random Forest Classifier
 - **Parameters**: 
-  - n_estimators=xx
-  - max_depth=xx
-  - min_samples_split=xx
+  - n_estimators=100
+  - max_depth=20
+  - min_samples_split=2
 
 ## Performance Metrics
 
 ### Test Set Results
 | Metric | Score |
 |--------|-------|
-| Accuracy | xx% |
-| Precision (??) | xx |
-| Recall (??) | xx |
-| F1-Score (??) | xx |
+| Accuracy | 84.5% |
+| Precision | 75% |
+| Recall | 51% |
+| F1-Score | 61% |
 
 ### Confusion Matrix
 |          | Predicted No Rain | Predicted Rain |
 |-------------------|---------|------|
-| Actual No Rain           | xx   | xx   |
-| Actual Rain              | xx     | xx  |
-
-### Feature Importance (Top 10)
-1. Humidity3pm - xx%
-2. Pressure3pm - xx%
-3. ?? - xx%
-4. ??
-5. ??
-6. ??
-7. ??
-8. ??
-9. ??
-10. ??
+| Actual No Rain           | 1094   | 60   |
+| Actual Rain              | 175     | 183  |
 
 ## Model Comparison
-| Model | Accuracy | F1-Score | Train Time |
-|-------|----------|----------|-----------|
-| Random Forest | xx% | xx | xxs |
-| Logistic Regression | xx% | xx | xxs |
+| Model | Accuracy | F1-Score |
+|-------|----------|----------|
+| Random Forest | 84.5% | 61% |
+| Logistic Regression | 83% | 59% |
 
 ## Grid Search Results
-- **CV Folds**: xx
+- **CV Folds**: 5
 - **Hyperparameters Tuned**: 
-  - n_estimators: [xx, xxx]
-  - max_depth: [xx, xxx, xxxx]
-  - min_samples_split: [xx, xxx]
-- **Total Configurations Tested**: xx
-- **Best Score**: xx (CV average)
+  - n_estimators: [50, 100]
+  - max_depth: [None, 10, 20]
+  - min_samples_split: [2, 5]
+- **Total Configurations Tested**: 12
+- **Best Score**: 85% (CV average)
 
 ## Processing Pipeline
 1. **Data Loading**: CSV from Kaggle
