@@ -253,6 +253,19 @@ importance_df_rf=pd.DataFrame({
 print("\nTop 10 Most Important Features:")
 print(importance_df_rf.head(10))
 
+# Plot top N features
+N = 15
+top_features_rf=importance_df_rf.head(N)
+
+plt.figure(figsize=(10, 6))
+plt.barh(range(len(top_features_rf)), top_features_rf['Importance'], color='steelblue')
+plt.yticks(range(len(top_features_rf)), top_features_rf['Feature'])
+plt.gca().invert_yaxis()
+plt.xlabel('Importance Score')
+plt.title(f'Random Forest - Top {N} Most Important Features')
+plt.tight_layout()
+plt.show()
+
 # Create ML pipeline: Preprocessing to Logistic Regression
 pipeline_lr=Pipeline(steps=[
     ('preprocessor', preprocessor),
