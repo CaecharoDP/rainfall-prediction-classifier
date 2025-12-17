@@ -16,8 +16,7 @@ import seaborn as sns
 print("All libraries imported successfully")
 
 # Load the Data
-url="https://www.kaggle.com/api/v1/datasets/download/jsphyg/weather-dataset-rattle-package"
-df=pd.read_csv(url)
+df = pd.read_csv('data/raw/weatherAUS.csv')
 
 print(f"Dataset shape: {df.shape}")
 print(f"\nFirst few rows:")
